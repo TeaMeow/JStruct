@@ -138,13 +138,13 @@ React    // 一個帶有 React 物件的種類
 var data = new Example
 (`
     user_id 數值
-    contrnt 字串
+    content 字串
 `)
 
 var data2 = new Example
 (`
     user_id 數值 使用者帳號
-    contrnt 字串 訊息內容
+    content 字串 訊息內容
     time    數值 訊息發送時間
 `)
 ```
