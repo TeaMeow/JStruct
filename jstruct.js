@@ -1,4 +1,4 @@
-function struct(names)
+export default names =>
 {
     var names = names.split("\n").map(name =>
     {
@@ -9,8 +9,12 @@ function struct(names)
     
     function constructor()
     {
-        for (var i = 0; i < count; i++) 
-            this[names[i]] = arguments[i]
+        if(typeof arguments[0] === 'object')
+            for (var i in arguments[0]) 
+                this[i] = arguments[0][i]
+        else
+            for (var i = 0; i < count; i++) 
+                this[names[i]] = arguments[i]
     }
     
     return constructor
